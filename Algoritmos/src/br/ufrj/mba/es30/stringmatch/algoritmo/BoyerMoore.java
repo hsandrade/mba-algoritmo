@@ -80,48 +80,4 @@ public class BoyerMoore implements InterfaceTeste {
 		
 		return ocorrencias;
 	}
-	
-	public static BoyerMoore compile(String pattern) {
-		char[] x = pattern.toCharArray();
-		int m = x.length;
-		
-		int[] bmGs = new int[m];
-		int[] bmBc = new int[65536];
-
-		preBmGs(x, bmGs);
-		preBmBc(x, bmBc);
-		
-		BoyerMoore bm = new BoyerMoore();
-		bm.bmBc = bmBc;
-		bm.bmGs = bmGs;
-		bm.x = x;
-		bm.m = m;
-		
-		return bm;
-	}
-	
-	public void findAll(String source) {
-		char[] y = source.toCharArray();
-		int i, j, n = y.length;
-		
-		j = 0;
-		while (j <= n - m) {
-			for (i = m - 1; i >= 0 && x[i] == y[i + j]; --i)
-				;
-			if (i < 0) {
-				//Resultado encontrado!
-				//Retorno removido para nao afetar memoria durante os testes,
-				//cuja finalidade é avaliar o tempo de processamento.
-				//result.add(j);
-
-				j += bmGs[0];
-			} else
-				j += Math.max(bmGs[i], bmBc[y[i + j]] - m + 1 + i);
-		}
-	}
-	
-	private int[] bmGs, bmBc;
-	private char[] x;
-	private int m;
-
 }

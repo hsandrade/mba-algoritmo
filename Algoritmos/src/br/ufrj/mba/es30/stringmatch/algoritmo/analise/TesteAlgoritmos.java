@@ -14,6 +14,7 @@ public class TesteAlgoritmos {
 	public static void main(String[] args) throws Exception {
 		TesteAlgoritmos teste = new TesteAlgoritmos();
 		
+		//palavra extraída do texto original (arquivo de 1024 bytes)
 		String entrada = "elit";
 		
 		teste.testarAlgoritmo(new BoyerMoore(), entrada);
@@ -31,7 +32,7 @@ public class TesteAlgoritmos {
 	    int numExecucoes;		
 		
 		System.out.println(algoritmo.getClass().getSimpleName());
-		System.out.println("Texto fonte (caracteres), Qtde execucoes, Tempo (s)");
+		System.out.println("Texto fonte (caracteres); Qtde execucoes; Tempo (s)");
 		
 		for (int i = 1; i <= maxArq; i++) {
 			String fonte = textoUtil.carregarTexto(i);
