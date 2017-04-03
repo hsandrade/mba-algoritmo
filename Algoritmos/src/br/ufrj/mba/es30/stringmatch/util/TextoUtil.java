@@ -13,7 +13,7 @@ public class TextoUtil {
 	public static void main(String[] args) throws Exception {
 		TextoUtil gerar = new TextoUtil();
 	
-		int qtdArquivos = 18; //1024bytes ate 8MB
+		int qtdArquivos = 17; //1024bytes ate 64MB
 
 		//considerando que 1 arquivo é padrao e já deve existir para inicializar os demais
 		for (int i = 2; i <= qtdArquivos; i++) {
