@@ -40,9 +40,8 @@ public class KarpRabin implements InterfaceTeste {
 		/*if(m > n)
 			return null;*/
 		
-		/* Preprocessing */
 		/*
-		 * computes d = 2^(m-1) with the left-shift operator
+		 * computa d = 2^(m-1) com o operador left-shift
 		 */
 		for (d = i = 1; i < m; ++i)
 			d = (d << 1);
@@ -52,7 +51,7 @@ public class KarpRabin implements InterfaceTeste {
 			hy = ((hy << 1) + y[i]);
 		}
 
-		/* Searching */
+		/* Busca */
 		j = 0;
 		while (j < n - m) {
 			if (hx == hy && arrayCmp(x, 0, y, j, m) == 0) {

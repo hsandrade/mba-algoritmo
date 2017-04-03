@@ -55,7 +55,7 @@ public class TextoUtil {
 	
 	private String getNomeArquivo(int indice) {
 		return "resources/tamanho-" + indice + ".txt";
-		//return "C:/Projetos/Pessoal/pos-graducacao/workspace/Algoritmo/temp/tamanho-" + indice + ".txt";
+		//return "C:/Projetos/temp/massa/tamanho-" + indice + ".txt";
 	}
 
 }

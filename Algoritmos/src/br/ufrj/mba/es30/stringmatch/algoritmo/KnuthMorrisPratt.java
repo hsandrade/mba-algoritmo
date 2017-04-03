@@ -35,10 +35,10 @@ public class KnuthMorrisPratt  implements InterfaceTeste {
 
 		int[] kmpNext = new int[x.length];
 
-		/* Preprocessing */
+		/* PreProcessamento */
 		preKmp(x, kmpNext);
 
-		/* Searching */
+		/* Busca */
 		i = j = 0;
 		while (j < n) {
 			while (i > -1 && x[i] != y[j])

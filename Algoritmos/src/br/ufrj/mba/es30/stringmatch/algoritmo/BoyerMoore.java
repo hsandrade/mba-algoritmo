@@ -57,11 +57,10 @@ public class BoyerMoore implements InterfaceTeste {
 		int[] bmGs = new int[m];
 		int[] bmBc = new int[65536];
 
-		/* Preprocessing */
 		preBmGs(x, bmGs);
 		preBmBc(x, bmBc);
 
-		/* Searching */
+		/* Busca */
 		j = 0;
 		while (j <= n - m) {
 			for (i = m - 1; i >= 0 && x[i] == y[i + j]; --i)
