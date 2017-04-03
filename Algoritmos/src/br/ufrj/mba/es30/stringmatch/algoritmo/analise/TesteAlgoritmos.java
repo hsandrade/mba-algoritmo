@@ -31,8 +31,9 @@ public class TesteAlgoritmos {
 	    final double TEMPO_MEDICAO = 1.0;
 	    int numExecucoes;		
 		
-		System.out.println(algoritmo.getClass().getSimpleName());
-		System.out.println("Texto fonte (caracteres); Qtde execucoes; Tempo (s)");
+	    String nomeAlgoritmo = algoritmo.getClass().getSimpleName(); 
+		System.out.println(nomeAlgoritmo);
+		System.out.println("Algoritmo;Texto fonte (caracteres); Qtde execucoes; Tempo (s)");
 		
 		for (int i = 1; i <= maxArq; i++) {
 			String fonte = textoUtil.carregarTexto(i);
@@ -62,7 +63,7 @@ public class TesteAlgoritmos {
 			//calcula o tempo em segundos
 			tempoExecucao = (t2-t1)/1000/numExecucoes;
 			
-			System.out.printf("%d;%d;%15.9f\n", tamanhoFonte, numExecucoes, tempoExecucao);
+			System.out.printf("%s;%d;%d;%15.9f\n", nomeAlgoritmo, tamanhoFonte, numExecucoes, tempoExecucao);
 			
 		}
 		
